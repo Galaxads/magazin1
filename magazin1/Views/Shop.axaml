@@ -1,0 +1,59 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="magazin1.Views.Shop"
+		Title="Shop"
+         x:CompileBindings="False">
+	<Grid>
+	<StackPanel Margin="20" >
+		<TextBlock Margin="0,5"  >Товары доступные к покупке:</TextBlock>
+		<ListBox x:Name="products" Height="350">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border
+						BorderThickness="2"
+						CornerRadius="4"
+						BorderBrush="Black">
+						<Grid
+							ShowGridLines="False"
+							ColumnDefinitions="*,*,*,*,*,*,*">
+							<TextBlock Text="{Binding Name}" HorizontalAlignment="Center" Grid.Column="0"/>
+							<TextBlock Text="{Binding Price}" HorizontalAlignment="Center" Grid.Column="1"/>
+							<TextBlock Text="Название:" HorizontalAlignment="Left" Grid.Column="0"/>
+							<TextBlock Text="Цена:"  HorizontalAlignment="Left" Grid.Column="1"/>
+							
+							<TextBlock Text="{Binding Colvo}" HorizontalAlignment="Center" Grid.Column="2"/>							
+							<TextBlock Text="Количество:" HorizontalAlignment="Left" Grid.Column="2"/>
+							<Button Tag="{Binding Id}" HorizontalAlignment="Center" Grid.Column="6" Click="Ybavtov">Удалить</Button>
+							<Button Tag="{Binding Id}" HorizontalAlignment="Center" Grid.Column="5" Click="Add_to_cart">Добавить в корзину</Button>
+							<Button Tag="{Binding Id}" HorizontalAlignment="Center" Grid.Column="4" Click="Redact_Product">Редактировать</Button>
+						</Grid>
+					</Border>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+			</ListBox>
+		
+	</StackPanel>
+	<TextBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Watermark="Введите название " IsEnabled="False" Width="180" Margin="30,0,0,150" x:Name="NameTovar">
+	</TextBox>
+	<Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="130" Margin="0,0,0,50" Click="Dobavtov" >
+		Добавить товар
+	</Button>
+		<TextBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Watermark="Введите цену " IsEnabled="False" Width="180" Margin="30,0,0,100" x:Name="PriceTovar">
+			
+		</TextBox>
+		<TextBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Watermark="Введите количество" IsEnabled="False" Width="180" Margin="30,0,0,50" x:Name="ColvoTovar">
+		</TextBox>
+		
+	<TextBlock Margin="20,0" HorizontalAlignment="Left" x:Name="prov" ></TextBlock>
+		
+		<Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="150" Margin="0,10,50,0" Click="Exit" >
+		 Выйти из аккаунта	
+		</Button>
+		<Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="80" Margin="0,10,250,0" Click="Baskets" >
+			Корзина
+		</Button>
+</Grid>
+</Window>

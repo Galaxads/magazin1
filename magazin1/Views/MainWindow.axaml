@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:magazin1.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:magazin1.Views"
+        mc:Ignorable="d" d:DesignWidth="1280" d:DesignHeight="720" MaxHeight="720" MaxWidth="1280" MinHeight="720" MinWidth="1280"
+        x:Class="magazin1.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="magazin1">
+	<Grid>
+		<TextBlock FontSize="20" Width="127" Margin="0,70,0,0" >
+			Авторизация
+		</TextBlock>
+		<TextBlock FontSize="15"  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30">
+			Для того чтобы воспользоваться магазином надо зайти в аккаунт
+		</TextBlock>
+		<TextBlock FontSize="20"  VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0,0,0,379" >
+			Введите логин
+		</TextBlock>
+		<TextBox FontSize="15"  VerticalAlignment="Bottom" Width="150" HorizontalAlignment="Center" Margin="0,0,0,460" x:Name="Logins">
+		</TextBox>
+		<TextBlock FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0,0,0,50"  >
+			Введите пароль
+		</TextBlock>
+		<TextBox FontSize="15"  VerticalAlignment="Bottom" Width="150"  HorizontalAlignment="Center"  Margin="0,0,0,290"  x:Name="Passwords">
+		</TextBox>
+		<Button  Width="55" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0,350,0,0" Click="Avtoriaz"  >
+			Вход
+		</Button>
+	</Grid>
+</Window>

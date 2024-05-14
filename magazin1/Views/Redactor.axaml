@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="350" MaxHeight="350" MaxWidth="250" MinHeight="350" MinWidth="250"
+        x:Class="magazin1.Views.Redactor"
+        Title="Redactor">
+	<Grid>
+		<TextBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Watermark="Введите название "  Width="180" Margin="30,0,0,150" x:Name="NameTovar">
+		</TextBox>
+		<Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="130" Margin="0,0,0,50" Click="Dobavtov1" >
+			Добавить товар
+		</Button>
+		<TextBox HorizontalAlignment="Left" VerticalAlignment="Bottom" Watermark="Введите цену "  Width="180" Margin="30,0,0,115" x:Name="PriceTovar">
+		</TextBox>
+		<TextBox HorizontalAlignment="Left" VerticalAlignment="Center"  Watermark="Введите количество"  Width="180" Margin="30,0,0,50" x:Name="ColvoTovar">
+		</TextBox>
+	 
+		<TextBlock Margin="20,0" HorizontalAlignment="Left" x:Name="prov" ></TextBlock>
+		<TextBlock Margin="0,100,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="errorSalle"></TextBlock>
+	</Grid>
+</Window>
